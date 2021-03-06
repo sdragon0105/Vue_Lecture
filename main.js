@@ -4,6 +4,7 @@ const app = Vue.createApp({
             cart: 0,
             product: 'Socks',
             image: './assets/images/socks_green.jpg',
+            inStock: false,
             inventory: 12,
             details: ['50% cotton', '30% wool', '20% polyester'],
             variants: [
@@ -15,10 +16,7 @@ const app = Vue.createApp({
     methods: {
         addToCart(){
             this.cart += 1
-        },
-        subToCart() {
-            this.cart -= 1            
-        },
+        },        
         updateImage(variantImage) {
             this.image = variantImage
         }
